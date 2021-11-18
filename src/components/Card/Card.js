@@ -1,7 +1,7 @@
 import React from 'react';
-import "./NewsCard.css";
+import "./Card.css";
 
-const NewsCard = ({newsItem}) => {
+const Card = ({newsItem}) => {
        
     return (
       <div className="newsCard">
@@ -83,4 +83,4 @@ const NewsCard = ({newsItem}) => {
     );
   };
 
-export default NewsCard;
+export default Card;

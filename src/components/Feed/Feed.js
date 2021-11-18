@@ -1,18 +1,18 @@
 import React from "react";
 import Container from '@mui/material/Container';
-import NewsCard from "../NewCard/NewsCard";
-import "./NewsContent.css";
+import Card from "../Card/Card";
+import "./Feed.css";
 
-const NewsContent = ({newsArray, newsResults}) => {
+const Feed = ({newsArray, newsResults}) => {
     return(
         <Container maxWidth="lg">
             <div className="content">
                 {newsArray.map((newsItem, i) => (
-                    <NewsCard newsItem={newsItem} key={newsItem.message} />
+                    <Card newsItem={newsItem} key={newsItem.message} />
                 ))}
             </div>
         </Container>
     );
 };
 
-export default NewsContent;
+export default Feed;

@@ -1,6 +1,5 @@
 import React from "react";
-import "./NavInShorts.css";
-import HamburgerDrawer from "./HamburgerDrawer"
+import "./Header.css";
 
 const Header = () => {
     return(

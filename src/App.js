@@ -1,8 +1,8 @@
 import './App.css';
 import axios from "axios"
 import {useEffect, useState} from "react";
-import Header from './components/Header';
-import NewsContent from './components/NewsContent/NewsContent';
+import Header from './components/Header/Header';
+import Feed from './components/Feed/Feed';
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <NewsContent newsArray={newsArray} newsResults={newsResults} />
+      <Feed newsArray={newsArray} newsResults={newsResults} />
       <Footer />
     </div>
   );
