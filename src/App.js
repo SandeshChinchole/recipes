@@ -7,21 +7,19 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [newsArray, setNewsArray] = useState([]);
-  const [newsResults, setNewsResults] = useState();
 
-  const newsFeedApi = async () => {
+  const newsFeed = async () => {
     try{
       const feed = await axios.get(`https://assets.studio71.io/test/news_feed.json`);
       setNewsArray(feed.data.items);
-      setNewsResults(feed.data.total);
     } catch(error){
       console.log(error);
     }
   };
 
   useEffect(() => {
-    newsFeedApi();
-  }, [newsResults]);
+    newsFeed();
+  });
 
   return (
     <div className="App">
