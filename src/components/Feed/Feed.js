@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Card from "../Card/Card";
 import "./Feed.css";
 
-const Feed = ({newsArray, newsResults}) => {
+const Feed = ({newsArray}) => {
     return(
         <Container maxWidth="lg">
             <div className="content">
