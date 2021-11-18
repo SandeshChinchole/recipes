@@ -9,13 +9,13 @@ const Footer = () => {
             </span>
             <hr style={{ width: "90%" }} />
             <div className="iconContainer">
-            <a href="https://www.instagram.com/roadsidecoder/" target="__blank">
+            <a href="https://www.instagram.com/studio71us/?hl=en" target="__blank">
                 <i className="fab fa-instagram-square fa-2x"></i>
             </a>
-            <a href="https://www.linkedin.com/in/piyush-eon" target="__blank">
+            <a href="https://www.linkedin.com/company/studio71lp" target="__blank">
                 <i className="fab fa-linkedin fa-2x"></i>
             </a>
-            <a href="https://piyushjsx.netlify.app/" target="__blank">
+            <a href="https://www.studio71.com/us/" target="__blank">
                 <i className="fas fa-link fa-2x"></i>
             </a>
             </div>
