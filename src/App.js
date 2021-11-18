@@ -1,9 +1,8 @@
-import './App.css';
 import axios from "axios"
 import {useEffect, useState} from "react";
-import Header from './components/Header/Header';
-import Feed from './components/Feed/Feed';
-import Footer from "./components/Footer/Footer";
+import Header from './components/Header';
+import Feed from './components/Feed';
+import Footer from "./components/Footer";
 
 const App = () => {
   const [newsArray, setNewsArray] = useState([]);
