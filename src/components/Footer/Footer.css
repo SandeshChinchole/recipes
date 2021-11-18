@@ -1,26 +1,26 @@
 .footer {
-    background-color: #222;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: #cccccc;
+    background: #252525;
+    padding: 40px 0 0;
+    border-top: 0 solid transparent;
+    display: block;
+    box-sizing: border-box;
+    height: 80px;
+    font-size: 16px;
   }
-  .name {
-    font-size: 20px;
-    padding: 20px 30px 15px;
-    color: white;
-  }
-  
-  a {
-    color: white;
-  }
-  
-  .iconContainer {
-    width: 60%;
-    height: 50px;
-    padding: 20px 0;
+
+  .links {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .links > a {
+    text-decoration: none;
+    padding: 0px 5px 0px 5px;
+    color: #e4e4e4;
   }
   

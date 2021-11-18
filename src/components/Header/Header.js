@@ -4,11 +4,9 @@ import "./Header.css";
 const Header = () => {
     return(
         <div className="nav">
-            <div className="icon">
-            </div>
-            <img style={{cursor: "pointer"}} src="https://s3.amazonaws.com/assets.studio71.io/img/s71_logo512.png"
-            height="80%"
-            alt="logo"
+            <img class="retina"
+                src="https://cdn.studio71.com/wp-content/uploads/2019/01/03101236/Studio71-Logo-Web-Horizontal-Retina.png"
+                alt="Studio71"
             />
         </div>
     );

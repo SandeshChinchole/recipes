@@ -1,11 +1,14 @@
 
 .nav{
-    height: 71px;
+    height: 80px;
     box-shadow: 0px 1px 8px #888888;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
 }
 
-.icon{
-    flex: 0.48;
+.retina {
+    width: 195px;
+    height: 30px;
 }
