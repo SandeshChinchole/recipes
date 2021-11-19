@@ -5,8 +5,8 @@ Details:
 1. Utilized Responsive Web design approach to preserve UI integrity across devices of variable screen sizes.
 2. Developed application using React functional components with modern Hooks APIs.
 3. Employed ES6+ features while creating the application.
-4. Designed the application UI using Material UI library.
-5. Consumed Studio71 API using Axios library.
+4. Designed the application UI using the Material UI library.
+5. Consumed Studio71 API to display data in the application.
 
 ## To run this project
 
