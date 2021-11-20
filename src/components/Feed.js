@@ -2,7 +2,7 @@ import React from "react";
 import Grid from '@mui/material/Grid';
 import Card from "./Card";
 
-const Feed = ({newsArray}) => {
+const Feed = ({news}) => {
     return(
         /*
         <Container maxWidth="lg">
@@ -21,9 +21,9 @@ const Feed = ({newsArray}) => {
         </Grid>
         */
         <Grid container spacing={1}>
-        {newsArray.map((newsItem, i) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} xl={3}>
-                    <Card newsItem={newsItem} key={newsItem.message} />
+        {news.map((item, i) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} xl={3} key={i}>
+                    <Card item={item} key={item.message} />
                 </Grid>
             ))}
         </Grid>
