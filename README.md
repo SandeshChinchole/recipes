@@ -6,7 +6,7 @@ Date of Submission: 01/02/2022
 
 Hours spent working on your project: 4 hours
 
-### Details:
+## Details:
 
 1. Utilized Responsive Web design approach to preserve UI integrity across devices of variable screen sizes.
 2. Developed webpage using React functional components with modern Hooks APIs.
@@ -14,7 +14,7 @@ Hours spent working on your project: 4 hours
 4. Designed the webpage UI using the Material UI library.
 5. Consumed drinks.json file to display data within the webpage.
 
-### Instructions to run the project.
+## Instructions to run the project.
 
 Step 1: In the project directory, type:
 
