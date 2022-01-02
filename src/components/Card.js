@@ -29,7 +29,13 @@ const Backdrop = styled('div')`
 `;
 
 const style = {
-  width: 600,
+  width: {
+    xs: 200,
+    sm: 380,
+    md: 500,
+    lg: 600,
+    xl: 800,
+  },
   bgcolor: '#1F1F1F',
   p: 5,
   outline: 'none',
@@ -58,35 +64,35 @@ const Card = ({item}) => {
           //onClose={handleClose} // uncomment to exit modal on background click
           BackdropComponent={Backdrop}
         >
-          <Box sx={style}>
-            <IconButton onClick={handleClose} id="closeButton">
-              <img src="https://assets.24g.com/public/2022-frontend-test-project/exit_icon.svg" alt="close icon" />
-            </IconButton>
-            <div className='drinkName'>
-              <h1>{item.name}</h1>
-            </div>
-            <div className='drinkDetails'>
-              <h3>Ingredients</h3>
-              <ul className='ingredients'>
-                {
-                  item.ingredients.map((name, index) => <li key={index}>{name}</li>)
-                }
-              </ul>
-              <hr />
-              <h3>How to prepare</h3>
-              <ul className='stepList'>
-                {
-                  item.steps.map((step, index) => <li key={index}>STEP {index + 1} {step}</li>)
-                }
-              </ul>
-              <hr />
-              <h3>Make it a mocktail</h3>
-              <p>{item.mocktail}</p>
-              <hr />
-              <h3>Glass recommendation</h3>
-              <p>{item.glassware}</p>
-            </div>
-          </Box>
+            <Box sx={style}>
+              <IconButton onClick={handleClose} id="closeButton">
+                <img src="https://assets.24g.com/public/2022-frontend-test-project/exit_icon.svg" alt="close icon" />
+              </IconButton>
+              <div className='drinkName'>
+                <h1>{item.name}</h1>
+              </div>
+              <div className='drinkDetails'>
+                <h3>Ingredients</h3>
+                <ul className='ingredients'>
+                  {
+                    item.ingredients.map((name, index) => <li key={index}>{name}</li>)
+                  }
+                </ul>
+                <hr />
+                <h3>How to prepare</h3>
+                <ul className='stepList'>
+                  {
+                    item.steps.map((step, index) => <li key={index}>STEP {index + 1} {step}</li>)
+                  }
+                </ul>
+                <hr />
+                <h3>Make it a mocktail</h3>
+                <p>{item.mocktail}</p>
+                <hr />
+                <h3>Glass recommendation</h3>
+                <p>{item.glassware}</p>
+              </div>
+            </Box>
         </StyledModal>    
       </div>
     );
