@@ -2,10 +2,10 @@ import React from "react";
 
 const Header = () => {
     return(
-        <div className="nav">
-            <img className="retina"
-                src="https://cdn.studio71.com/wp-content/uploads/2019/01/03101236/Studio71-Logo-Web-Horizontal-Retina.png"
-                alt="Studio71"
+        <div className="logoContainer">
+            <img className="logo"
+                src="https://assets.24g.com/public/2022-frontend-test-project/24g_logo.svg"
+                alt="24G Logo"
             />
         </div>
     );

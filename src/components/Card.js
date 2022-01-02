@@ -1,83 +1,93 @@
 import React from 'react';
+import { useState } from "react";
+import { styled, Box } from '@mui/system';
+import { ModalUnstyled } from '@mui/base';
+import { IconButton } from '@material-ui/core';
+
+const StyledModal = styled(ModalUnstyled)`
+  position: fixed;
+  z-index: 1300;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+`;
+
+const Backdrop = styled('div')`
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-tap-highlight-color: transparent;
+`;
+
+const style = {
+  width: 600,
+  bgcolor: '#1F1F1F',
+  p: 5,
+  outline: 'none',
+  borderRadius: 5
+};
 
 const Card = ({item}) => {
-       
-    return (
-      <div className="newsCard">
-        <img
-          alt={item.message}
-          src={
-            item.thumbnail
-              ? item.thumbnail
-              : "https://s3.amazonaws.com/assets.studio71.io/img/s71_logo512.png"
-          }
-          className="newsImage"
-        />
-        <div className="newsText">
-          <p className="title">{item.title}</p>
-          <span className="description">{item.message}</span>
-          {
-            item.type === "milestone-subs" ?
-            <>
-              <span className="description">Total Subscribers: {item.subscribers}</span>
-              <span className="description">Estimated Subscribers (7 days): {item.estimated_subscribers_7_days}</span>
-              <span className="description">Estimated Subscribers (30 days): {item.estimated_subscribers_30_days}</span>
-            </>
-            : item.type === "trending-video" ?
-            <>
-              <span className="description">Channel Name: {item.channel_title}</span>
-            </>
-            : item.type === "delta-subs" ?
-            <>
-              <span className="description">Total Subscribers: {item.subscribers}</span>
-              <span className="description">Subscribers (30 days): {item.subscribers_30_days}</span>
-              <span className="description">Type of Change in Subscribers: {item.change_type}</span>
-              <span className="description">Percentage of Change in Subscribers (30 days): {item.percent_change_30_day}</span>
-            </>
-            /*
-            : item.message === "\"Rim\" can be seen in 1.1% of the network's images uploaded to Instagram in the past week." ?
-              item.thumbnail = "https://s3.amazonaws.com/assets.studio71.io/img/s71_logo512.png"
-             */
-            : <></>
-          } 
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
-        </div>
-        <div className="contentTypeContainer">
-        {
-            item.type === "milestone-subs" ?
-            <>
-              <span className="contentType">Milestone Subs</span>
-            </>
-            : item.type === "trending-video" ?
-            <>
-              <span className="contentType">Trending Video</span>
-            </>
-            : item.type === "stats-trend" ?
-            <>
-            <span className="contentType">Stats Trend</span>
-            </>
-            : item.type === "channel-overlap" ?
-            <>
-              <span className="contentType">Channel Overlap</span>
-            </>
-            : item.type === "delta-subs" ?
-            <>
-              <span className="contentType">Delta Subs</span>
-            </>
-            : item.type === "video-objects" ?
-            <>
-              <span className="contentType">Video Objects</span>
-            </>
-            : item.type === "video-topics" ?
-            <>
-              <span className="contentType">Video Topics</span>
-            </>
-            :
-            <>
-              <span className="contentType">New Channel</span>
-            </>
-          }
-        </div>
+    return (
+      <div className="drinkCard">
+        <img
+          alt={item.name}
+          src={item.images.front}
+          className="drinkImage"
+          onClick={handleOpen}
+          onMouseOver={e => (e.currentTarget.src = item.images.back)}
+          onMouseOut={e => (e.currentTarget.src = item.images.front)}
+        />
+        <StyledModal
+          aria-labelledby="drink-modal"
+          aria-describedby="modal-describing-drink"
+          open={open}
+          //onClose={handleClose} // uncomment to exit modal on background click
+          BackdropComponent={Backdrop}
+        >
+          <Box sx={style}>
+            <IconButton onClick={handleClose} id="closeButton">
+              <img src="https://assets.24g.com/public/2022-frontend-test-project/exit_icon.svg" />
+            </IconButton>
+            <div className='drinkName'>
+              <h1>{item.name}</h1>
+            </div>
+            <div className='drinkDetails'>
+              <h3>Ingredients</h3>
+              <ul className='ingredients'>
+                {
+                  item.ingredients.map((name, index) => <li key={index}>{name}</li>)
+                }
+              </ul>
+              <hr />
+              <h3>How to prepare</h3>
+              <ul className='stepList'>
+                {
+                  item.steps.map((step, index) => <li key={index}>STEP {index + 1} {step}</li>)
+                }
+              </ul>
+              <hr />
+              <h3>Make it a mocktail</h3>
+              <p>{item.mocktail}</p>
+              <hr />
+              <h3>Glass recommendation</h3>
+              <p>{item.glassware}</p>
+            </div>
+          </Box>
+        </StyledModal>    
       </div>
     );
   };

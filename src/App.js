@@ -1,30 +1,30 @@
 import axios from "axios"
 import {useEffect, useState} from "react";
 import Header from './components/Header';
-import Feed from './components/Feed';
-import Footer from "./components/Footer";
+import Beverages from './components/Beverages';
+import Introduction from './components/Introduction';
 
 const App = () => {
-  const [news, setNews] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
-  const newsFeed = async () => {
+  const beverages = async () => {
     try{
-      const feed = await axios.get(`https://assets.studio71.io/test/news_feed.json`);
-      setNews(feed.data.items);
+      const list = await axios.get(`https://assets.24g.com/public/2022-frontend-test-project/drinks.json`);
+      setRecipes(list.data.drinks);
     } catch(error){
       console.log(error);
     }
   };
 
   useEffect(() => {
-    newsFeed();
+    beverages();
   });
 
   return (
     <div>
       <Header />
-      <Feed news={news} />
-      <Footer />
+      <Introduction />
+      <Beverages recipes={recipes} />
     </div>
   );
 }

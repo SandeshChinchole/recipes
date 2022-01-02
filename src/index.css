@@ -1,114 +1,189 @@
+:root {
+
+  /* Colors: */
+  --50-black: #00000080;
+  --24g-midnight-grey: #393C3E;
+  --bg-grey: #1F1F1F;
+  --black: #000000;
+  --white: #FFFFFF;
+  --24g-orange: #FAA61A;
+  
+  /* Font/text values */
+  --unnamed-font-family-writable-story-personal-use: Writable Story;
+  --unnamed-font-family-brandon-grotesque: Brandon Grotesque;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-weight-medium: medium;
+  --unnamed-font-size-16: 16px;
+  --unnamed-font-size-20: 20px;
+  --unnamed-font-size-60: 60px;
+  --unnamed-font-size-70: 70px;
+  --unnamed-font-size-20-999996185302734: 20.999996185302734px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-character-spacing-1-05: 1.05px;
+  --unnamed-character-spacing-1-6: 1.6px;
+  --unnamed-line-spacing-23: 23px;
+  --unnamed-line-spacing-28: 28px;
+  --unnamed-line-spacing-30: 30px;
+  --unnamed-line-spacing-80: 80px;
+  --unnamed-line-spacing-100: 100px;
+  --unnamed-text-transform-uppercase: uppercase;
+}
+  
+/* Character Styles */
+
+.headers {
+font-family: var(--unnamed-font-family-writable-story-personal-use);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-70);
+line-height: var(--unnamed-line-spacing-100);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--white);
+}
+.mobile-header {
+font-family: var(--unnamed-font-family-writable-story-personal-use);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-60);
+line-height: var(--unnamed-line-spacing-80);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--white);
+}
+.subline {
+font-family: var(--unnamed-font-family-brandon-grotesque);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-medium);
+font-size: var(--unnamed-font-size-16);
+line-height: var(--unnamed-line-spacing-23);
+letter-spacing: var(--unnamed-character-spacing-1-6);
+color: var(--white);
+text-transform: var(--unnamed-text-transform-uppercase);
+}
+.subheaders {
+font-family: var(--unnamed-font-family-brandon-grotesque);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-20-999996185302734);
+line-height: var(--unnamed-line-spacing-30);
+letter-spacing: var(--unnamed-character-spacing-1-05);
+color: var(--white);
+}
+.body-copy-large {
+font-family: var(--unnamed-font-family-brandon-grotesque);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-20);
+line-height: var(--unnamed-line-spacing-28);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--white);
+}
+.body-copy-small {
+font-family: var(--unnamed-font-family-brandon-grotesque);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-16);
+line-height: var(--unnamed-line-spacing-28);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--white);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 3rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color: var(--white);
+  background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_desktop.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Header */
 
-.nav{
-  height: 80px;
-  box-shadow: 0px 1px 8px #888888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1a1a1a;
+.logoContainer {
+  text-align: left;
 }
 
-.retina {
-  width: 195px;
-  height: 30px;
+/* Introduction */
+
+.introductionContainer h1 {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-70)/var(--unnamed-line-spacing-100) var(--unnamed-font-family-writable-story-personal-use);
+  letter-spacing: var(--unnamed-character-spacing-0);
 }
 
-/* Footer */
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #cccccc;
-  background: #252525;
-  height: 80px;
-  font-size: 16px;
-  flex-wrap: wrap;
+.introductionContainer p {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-brandon-grotesque);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  padding: 1rem 17.5rem 2rem;
 }
 
-/*
-.links {
-  display: flex;
-  justify-content: center;
-  
-}
-*/
+/* Grid */
 
-a {
-  text-decoration: none;
-  padding: 0px 5px 0px 5px;
-  color: #e4e4e4;
+.gridContainer {
+  padding: 0rem 8rem;
 }
 
 /* Card */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
-.newsCard {
+.drinkCard {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin: 10px;
+  border-radius: 15px;
+}
+
+.drinkCard :hover {
+  cursor: pointer;
+  transform: translate(0, -1rem);
+  transition: 1s ease-in-out;
+}
+
+.drinkImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
-.newsText {
-  padding: 10px;
-  height: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #f5f5f5;
+#closeButton {
+  left: 73rem;
+  top: 2rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+.drinkName h1 {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-70)/var(--unnamed-line-spacing-100) var(--unnamed-font-family-writable-story-personal-use);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.drinkDetails {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-brandon-grotesque);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  overflow: hidden;
   overflow-y: scroll;
-  scrollbar-width: thin;
+  height: 300px;
 }
 
-.newsImage {
-  object-fit: cover;
-  width: 100%;
-  height: 50%;
-  border-radius: 5px 5px 0px 0px;
+.drinkDetails h3 {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 21px/var(--unnamed-line-spacing-30) var(--unnamed-font-family-brandon-grotesque);
+  letter-spacing: var(--unnamed-character-spacing-1-05);
 }
 
-.title {
-  font: 900 0.95em "Roboto", sans-serif;
-  text-transform: capitalize;
+.drinkDetails hr {
+  border: 1px solid var(--24g-midnight-grey);
 }
 
-.description {
-  font-size: 0.8em;
-  color: #44444d;
+.ingredients {
+  list-style-type: circle;
 }
 
-.description > p {
-  margin: 0px;
-}
-
-.contentTypeContainer {
-  font: 700 0.7em "Roboto", sans-serif;
-  height: 10%;
-  background-color: #fff;
-  border-radius: 0px 0px 5px 5px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding-left: 5px;
-  text-transform: uppercase;
+.stepList {
+  list-style-type: none;
+  padding-left: 0;
 }

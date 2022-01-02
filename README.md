@@ -1,4 +1,4 @@
-# Studio71 Newsfeed
+# 24G Frontend Test Project
 
 Details:
 
@@ -6,7 +6,7 @@ Details:
 2. Developed application using React functional components with modern Hooks APIs.
 3. Employed ES6+ features while creating the application.
 4. Designed the application UI using the Material UI library.
-5. Consumed Studio71 API to display data in the application.
+5. Consumed drinks.json file to display data within the application.
 
 ## To run this project
 
