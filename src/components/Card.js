@@ -60,7 +60,7 @@ const Card = ({item}) => {
         >
           <Box sx={style}>
             <IconButton onClick={handleClose} id="closeButton">
-              <img src="https://assets.24g.com/public/2022-frontend-test-project/exit_icon.svg" />
+              <img src="https://assets.24g.com/public/2022-frontend-test-project/exit_icon.svg" alt="close icon" />
             </IconButton>
             <div className='drinkName'>
               <h1>{item.name}</h1>

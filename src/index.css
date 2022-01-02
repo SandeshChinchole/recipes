@@ -187,3 +187,82 @@ body {
   list-style-type: none;
   padding-left: 0;
 }
+
+
+/**/
+
+@media (max-width: 1080px) {
+
+/* Introduction */
+
+.introductionContainer p {
+  padding: 1rem 10rem 2rem;
+}
+
+/* Grid */
+
+.gridContainer {
+  padding: 0rem 4rem;
+}
+
+}
+
+/**/
+
+@media (max-width: 872px) {
+
+/* Introduction */
+
+.introductionContainer p {
+  padding: 1rem 2rem 2rem;
+}
+
+/* Grid */
+
+.gridContainer {
+  padding: 0rem 3rem;
+}
+  
+}
+
+/**/
+
+@media (max-width: 588px) {
+
+/* Header */
+
+.logo {
+  width: 4rem;
+}
+
+/* Introduction */
+
+.introductionContainer p {
+  padding: 1rem 2rem 2rem;
+}
+
+/* Grid */
+
+.gridContainer {
+  padding: 0rem 2rem;
+}
+  
+}
+
+/**/
+
+@media (max-width: 404px) {
+
+/* Introduction */
+
+.introductionContainer p {
+  padding: 1rem 0rem 2rem;
+}
+
+/* Grid */
+
+.gridContainer {
+  padding: 0rem;
+}
+  
+}
