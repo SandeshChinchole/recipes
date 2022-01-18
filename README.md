@@ -4,7 +4,7 @@ First and Last name: Sandesh Chinchole
 
 Date of Submission: 01/02/2022
 
-Hours spent working on your project: 4 hours
+Hours spent working the project: 4 hours
 
 ## Details:
 
